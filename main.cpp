@@ -75,9 +75,9 @@ struct Card
         out << rank[card.rankCard] << suit[card.suitCard];
         return out;
     }
-    int val() 
+    int val() const
     {
-        std::array rankVal {11,2,3,4,5,6,7,8,9,10,10,10,10};
+        static constexpr std::array<int,maxRank> rankVal {11,2,3,4,5,6,7,8,9,10,10,10,10};
         return rankVal[rankCard];
     }
 };
